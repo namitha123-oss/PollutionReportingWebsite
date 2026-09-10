@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoReport - Environmental Pollution Reporting</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Eco<span>Report</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#report">Report Pollution</a>
+            <a href="#track">Track Complaint</a>
+            <a href="#about">About</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HOME SECTION -->
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <p class="small-title">SMART ENVIRONMENTAL REPORTING</p>
+
+            <h1>
+                Report Pollution.<br>
+                <span>Make a Difference.</span>
+            </h1>
+
+            <p>
+                Help protect our environment by reporting pollution
+                in your area quickly and easily.
+            </p>
+
+            <a href="#report" class="main-button">
+                Report Pollution →
+            </a>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="globe">
+                🌍
+            </div>
+
+            <div class="pollution-icons">
+
+                <div>🏭</div>
+                <div>💧</div>
+                <div>🗑️</div>
+                <div>🔊</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- REPORT SECTION -->
+    <section id="report" class="section">
+
+        <div class="section-heading">
+
+            <p class="small-title">REPORT AN INCIDENT</p>
+
+            <h2>Report Environmental Pollution</h2>
+
+            <p>
+                Provide the details below to help authorities understand
+                and respond to the problem.
+            </p>
+
+        </div>
+
+
+        <div class="form-container">
+
+            <form id="complaintForm">
+
+                <label>Pollution Type</label>
+
+                <select id="pollutionType" required>
+
+                    <option value="">Select pollution type</option>
+
+                    <option value="Air Pollution">
+                        Air Pollution
+                    </option>
+
+                    <option value="Water Pollution">
+                        Water Pollution
+                    </option>
+
+                    <option value="Land Pollution">
+                        Land Pollution
+                    </option>
+
+                    <option value="Noise Pollution">
+                        Noise Pollution
+                    </option>
+
+                    <option value="Waste Pollution">
+                        Waste Pollution
+                    </option>
+
+                </select>
+
+
+                <label>Description</label>
+
+                <textarea
+                    id="description"
+                    placeholder="Describe the pollution problem..."
+                    required>
+                </textarea>
+
+
+                <label>Location</label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Enter location"
+                    required>
+
+
+                <label>Severity</label>
+
+                <select id="severity" required>
+
+                    <option value="">
+                        Select severity
+                    </option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                    <option value="Medium">
+                        Medium
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
+                    <option value="Critical">
+                        Critical
+                    </option>
+
+                </select>
+
+
+                <label>Upload Photo</label>
+
+                <input
+                    type="file"
+                    id="photo"
+                    accept="image/*">
+
+
+                <button type="submit" class="submit-button">
+                    Submit Complaint
+                </button>
+
+            </form>
+
+
+            <!-- SUCCESS MESSAGE -->
+
+            <div id="successMessage" class="success-box">
+
+                <h3>Complaint Submitted!</h3>
+
+                <p>Your Complaint ID is:</p>
+
+                <strong id="complaintID"></strong>
+
+                <p>
+                    Please save this ID to track your complaint.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRACK SECTION -->
+
+    <section id="track" class="section tracking-section">
+
+        <div class="section-heading">
+
+            <p class="small-title">TRACK YOUR REPORT</p>
+
+            <h2>Complaint Tracking</h2>
+
+            <p>
+                Enter your complaint ID to check its current status.
+            </p>
+
+        </div>
+
+
+        <div class="tracking-box">
+
+            <input
+                type="text"
+                id="trackingID"
+                placeholder="Example: PCR-2026-1234">
+
+            <button onclick="trackComplaint()">
+                Track Complaint
+            </button>
+
+            <div id="trackingResult"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+
+    <section id="about" class="about-section">
+
+        <h2>About EcoReport</h2>
+
+        <p>
+            EcoReport is a smart environmental pollution reporting
+            platform designed to connect citizens with environmental
+            authorities.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>📍 Geotagging</h3>
+                <p>
+                    Identify the location of pollution incidents.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>📸 Evidence</h3>
+                <p>
+                    Upload photographs to support your complaint.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>⚡ Priority</h3>
+                <p>
+                    Serious complaints can receive higher priority.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>📋 Tracking</h3>
+                <p>
+                    Track the progress of your complaint.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 EcoReport | Environmental Pollution Complaint
+            and Monitoring System
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
